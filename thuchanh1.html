@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<button onclick="getvalue()">Get</button>
+<button onclick="displayvalue()">Display</button>
+<div id="display"></div>
+<script>
+    let a = Array();
+    let x = 0;
+    function getvalue() {
+       a[x] = document.getElementById("nhap").value;
+       x++;
+    }
+    function displayvalue(){
+        document.getElementById("display").innerHTML = "";
+        for(i=0;i<a.length;i++){
+            document.getElementById('display').innerHTML += "Phần tử thứ " + i +"  là  :" + a[i] + "<br>";
+        }
+
+    }
+</script>
+</body>
+</html>
